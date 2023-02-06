@@ -21,13 +21,12 @@ Prior to UCSD, I received my M.Sc. degree in Mathematics from Texas A&M Universi
 #== Education 
 
 == Research Interests
-My current research focuses on developing a theoretical understanding 
-of fundamental algorithms in deep learning, using tools from high-dimensional probability. \n
+My current research focuses on theoretically understanding and improving fundamental algorithms in data science, especially in deep learning, using tools from high-dimensional probability. \n
 - Random Matrix Theory and Free Probability Theory
 - Deep Learning Theory 
 - High-dimensional Statistics
 
-== Publications and Preprints
+== Selected Publications
 - [https://arxiv.org/abs/2211.06077 Overparameterized random feature regression with nearly orthogonal data] \n
 *Zhichao Wang*, Yizhe Zhu \n
 AISTATS 2023 
