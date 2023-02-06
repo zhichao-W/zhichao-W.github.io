@@ -1,5 +1,7 @@
 # jemdoc: menu{MENU}{publications.html}, nofooter
-== Preprints
+== Papers
+
+=== Preprints
 - [https://arxiv.org/abs/2211.06506 Spectral evolution and invariance in linear-width neural networks ] \n
 *Zhichao Wang*, Andrew Engel, Anand Sarwate, Ioana Dumitriu, Tony Chiang \n
 Submitted
@@ -8,7 +10,7 @@ Submitted
 *Zhichao Wang*, Yizhe Zhu \n
 Submitted 
 
-== Publications
+=== Publications
 - [https://arxiv.org/abs/2211.06077 Overparameterized random feature regression with nearly orthogonal data] \n
 *Zhichao Wang*, Yizhe Zhu \n
 AISTATS 2023 
