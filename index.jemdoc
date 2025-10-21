@@ -2,59 +2,76 @@
 == Zhichao Wang
 
 ~~~
-{}{img_left}{photos/bio.jpg}{alt text}{245px}{326px}
-[https://zhichao-W.github.io Zhichao Wang], \n 
-Ph.D. Student at [https://https://math.ucsd.edu/ Department of Mathematics] \n
-University of California San Diego \n
+{}{img_left}{photos/ZW1.JPG}{alt text}{550px}{430px}
+[https://mathweb.ucsd.edu/~zhw036/ Zhichao Wang] (*王志超*) \n 
+Ph.D. Student at [https://math.ucsd.edu/ Department of Mathematics] \n
+University of California, San Diego \n
 \n
 Email: zhw036@ucsd.edu \n
-\[[pdf/CV.pdf Curriculem Vitae]\] \n
+\[[pdf/CV.pdf Curriculum Vitae]\] \n
+[https://scholar.google.com/citations?user=IjXnDdoAAAAJ&hl=en Google Scholar]
 ~~~
 
 #== News
 
 == About me
-I am a fourth-year PhD student in the [https://https://math.ucsd.edu/ Department of Mathematics] at UC San Diego. I am very fortunate to be advised by 
-[https://math.ucsd.edu/people/profiles/ioana-dumitriu Ioana Dumitriu] and [https://mathweb.ucsd.edu/~tkemp/ Todd Kemp]. 
-Prior to UCSD, I received my M.Sc. degree in Mathematics from Texas A&M University, supervised by [https://www.math.tamu.edu/~manshel/ Michael Anshelevich], and my B.Sc. degree in Mathematics from [https://ev.buaa.edu.cn/ Beihang University].
+I am a PhD student in the [https://math.ucsd.edu/ Department of Mathematics] at UC San Diego. I am very fortunate to be advised by 
+[https://math.ucsd.edu/people/profiles/ioana-dumitriu Ioana Dumitriu] and [https://mathweb.ucsd.edu/~tkemp/ Todd Kemp]. I interned during Summer 2021 and 2022 with [https://www.pnnl.gov/people/tony-chiang Tony Chiang] at Pacific Northwest National Laboratory.
+Prior to UCSD, I received my M.Sc. degree in Mathematics from Texas A&M University, supervised by [https://www.math.tamu.edu/~manshel/ Michael Anshelevich], and my B.Sc. degree in Mathematics and Applied Math from Chinese Academy of Sciences Hua Loo-Keng Class at [https://ev.buaa.edu.cn/ Beihang University].
 
 #== Education 
 
 == Research Interests
 My current research focuses on theoretically understanding and improving fundamental algorithms in data science, especially in deep learning, using tools from high-dimensional probability. \n
 - Random Matrix Theory and Free Probability Theory
-- Deep Learning Theory 
+- Deep Learning Theory and Foundations of AI
 - High-dimensional Statistics
 
 == Publications and Preprints
-- [https://arxiv.org/abs/2211.06506 Spectral evolution and invariance in linear-width neural networks ] \n
-*Zhichao Wang*, Andrew Engel, Anand Sarwate, Ioana Dumitriu, Tony Chiang \n
-ArXiv preprint, submitted
+- [https://arxiv.org/abs/2402.10127 Nonlinear spiked covariance matrices and signal propagation in deep neural networks.] \n
+*Zhichao Wang*, Denny Wu, and Zhou Fan \n
+Submitted.
 
-- [https://arxiv.org/abs/2211.06077 Overparameterized random feature regression with nearly orthogonal data] \n
-*Zhichao Wang*, Yizhe Zhu \n
-AISTATS 2023 
+- Unlocking Exact Recovery in Semi-Supervised Learning: Analysis of Spectral Method and Graph Convolution Network. \n
+Haixiao Wang and *Zhichao Wang* \n
+Submitted.
 
-- [https://openreview.net/forum?id=akddwRG6EGi High-dimensional Asymptotics of Feature Learning: How One Gradient Step Improves the Representation] \n
+- [https://arxiv.org/abs/2305.14585 Faithful and Efficient Explanations for Neural Networks via Neural Tangent Kernel Surrogate Models.] \n
+Andrew Engel, *Zhichao Wang*, Natalie S. Frank, Ioana Dumitriu, Sutanay Choudhury, Anand Sarwate, and Tony Chiang \n
+ICLR 2024, *Spotlight*, to appear.
+
+- [https://openreview.net/forum?id=HlIAoCHDWW Learning in the Presence of Low-dimensional Structure: A Spiked Random Matrix Perspective.] \n
+Jimmy Ba, Murat A. Erdogdu, Taiji Suzuki, *Zhichao Wang*, and Denny Wu \n
+NeurIPS 2023.
+
+- [https://arxiv.org/abs/2211.06506 Spectral evolution and invariance in linear-width neural networks.] \n
+*Zhichao Wang*, Andrew Engel, Anand Sarwate, Ioana Dumitriu, and Tony Chiang \n
+NeurIPS 2023.
+
+- [https://arxiv.org/abs/2211.06077 Overparameterized random feature regression with nearly orthogonal data.] \n
+*Zhichao Wang* and Yizhe Zhu \n
+AISTATS 2023.
+
+- [https://openreview.net/forum?id=akddwRG6EGi High-dimensional Asymptotics of Feature Learning: How One Gradient Step Improves the Representation.] \n
 Jimmy Ba, Murat A. Erdogdu, Taiji Suzuki, *Zhichao Wang*, Denny Wu, and Greg Yang \n
-NeurIPS 2022
+NeurIPS 2022.
 
-- [https://arxiv.org/abs/2109.09304 Deformed semicircle law and concentration of nonlinear random matrices for ultra-wide neural networks] \n
-*Zhichao Wang*, Yizhe Zhu \n
-ArXiv preprint, submitted 
+- [https://arxiv.org/abs/2109.09304 Deformed semicircle law and concentration of nonlinear random matrices for ultra-wide neural networks.] \n
+*Zhichao Wang* and Yizhe Zhu \n
+Annals of Applied Probability, to appear.
 
-- [https://arxiv.org/abs/2102.01214 Tree convolution for probability distributions with unbounded support] \n
+- [https://arxiv.org/abs/2102.01214 Tree convolution for probability distributions with unbounded support.] \n
 Ethan Davis, David Jekel, *Zhichao Wang* \n
 Latin American Journal of Probability and Mathematics Statistics 18.2 (2021), pp. 1585-1623. 
 
-- [https://arxiv.org/abs/2005.11879 Spectra of the Conjugate Kernel and Neural Tangent Kernel for linear-width neural networks] \n
-Zhou Fan, *Zhichao Wang* \n
-NeurIPS 2020, *Oral Presentation*
+- [https://arxiv.org/abs/2005.11879 Spectra of the Conjugate Kernel and Neural Tangent Kernel for linear-width neural networks.] \n
+Zhou Fan and *Zhichao Wang* \n
+NeurIPS 2020, *Oral Presentation*.
  
-- [https://arxiv.org/abs/1903.09592 Principal components in linear mixed models with general bulk] \n
-Zhou Fan, Yi Sun, *Zhichao Wang* \n
+- [https://arxiv.org/abs/1903.09592 Principal components in linear mixed models with general bulk.] \n
+Zhou Fan, Yi Sun, and *Zhichao Wang* \n
 The Annals of Statistics, 49.3 (2021), pp. 1489-1513.
 
-- [https://arxiv.org/abs/1811.00456 Higher variations for free Levy processes] \n
-Michael Anshelevich, *Zhichao Wang* \n
+- [https://arxiv.org/abs/1811.00456 Higher variations for free Levy processes.] \n
+Michael Anshelevich and *Zhichao Wang* \n
 Studia Math. 252 (2020), pp. 49-81.

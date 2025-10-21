@@ -1,13 +1,13 @@
 # jemdoc: menu{MENU}{talks.html}, nofooter
 == Talks
 
-=== Virtual Talks
+=== Some Virtual Talks
 
-- [https://slideslive.com/38938538 Spectra of the Conjugate Kernel and Neural Tangent Kernel for linear-width neural networks]\n
-NeurIPS 2020
+- [https://slideslive.com/38938538 Spectra of the Conjugate Kernel and Neural Tangent Kernel for linear-width neural networks.]\n
+NeurIPS 2020.
 
-- [https://www.youtube.com/watch?v=MfQyfnzNYuk Tree convolution for probability distributions with unbounded support]\n
-RMMC Summer School (2022) on Free Probability, Random Matrices, and Applications, University of Wyoming, June 2022
+- [https://www.youtube.com/watch?v=MfQyfnzNYuk Tree convolution for probability distributions with unbounded support.]\n
+RMMC Summer School (2022) on Free Probability, Random Matrices, and Applications, University of Wyoming, June 2022.
 
-- [https://slideslive.com/38990673 High-dimensional Asymptotics of Feature Learning: How One Gradient Step Improves the Representation] \n
-NeuIPS 2022
+- [https://slideslive.com/38990673 High-dimensional Asymptotics of Feature Learning: How One Gradient Step Improves the Representation.] \n
+NeurIPS 2022. 

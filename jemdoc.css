@@ -9,6 +9,7 @@ table#tlayout {
 body {
 	background: white;
 	font-family: Georgia, serif;
+	font-size: 16px;
 	padding-bottom: 8px;
 	margin: 0;
 }
@@ -19,7 +20,7 @@ body {
 	padding-top: 0.5em;
 	padding-left: 8px;
 	padding-right: 8px;
-	font-size: 1.0em;
+	font-size: 1.2em;
 	width: auto;
 	white-space: nowrap;
     text-align: left;
@@ -42,7 +43,7 @@ body {
 }
 
 #layout-menu a {
-	line-height: 1.5em;
+	line-height: 1.0em;
 	margin-left: 0.5em;
 }
 
