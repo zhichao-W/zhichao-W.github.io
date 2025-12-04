@@ -3,75 +3,93 @@
 
 ~~~
 {}{img_left}{photos/ZW1.JPG}{alt text}{550px}{430px}
-[https://mathweb.ucsd.edu/~zhw036/ Zhichao Wang] (*王志超*) \n 
-Ph.D. Student at [https://math.ucsd.edu/ Department of Mathematics] \n
-University of California, San Diego \n
-\n
-Email: zhw036@ucsd.edu \n
-\[[pdf/CV.pdf Curriculum Vitae]\] \n
+Zhichao Wang \n 
+Postdoctoral researcher at [https://statistics.berkeley.edu/ Department of Statistics] \n
+[https://www.icsi.berkeley.edu/ International Computer Science Institute] \n
+University of California, Berkeley
+
+*Contact*: zhichao.wang (at) berkeley (dot) edu
+
+[pdf/CV.pdf Curriculum Vitae] \n
 [https://scholar.google.com/citations?user=IjXnDdoAAAAJ&hl=en Google Scholar]
 ~~~
 
 #== News
 
 == About me
-I am a PhD student in the [https://math.ucsd.edu/ Department of Mathematics] at UC San Diego. I am very fortunate to be advised by 
-[https://math.ucsd.edu/people/profiles/ioana-dumitriu Ioana Dumitriu] and [https://mathweb.ucsd.edu/~tkemp/ Todd Kemp]. I interned during Summer 2021 and 2022 with [https://www.pnnl.gov/people/tony-chiang Tony Chiang] at Pacific Northwest National Laboratory.
-Prior to UCSD, I received my M.Sc. degree in Mathematics from Texas A&M University, supervised by [https://www.math.tamu.edu/~manshel/ Michael Anshelevich], and my B.Sc. degree in Mathematics and Applied Math from Chinese Academy of Sciences Hua Loo-Keng Class at [https://ev.buaa.edu.cn/ Beihang University].
+I am a postdoctoral researcher with a joint appointment in the [https://statistics.berkeley.edu/ Department of Statistics] at University of California, Berkeley, and [https://www.icsi.berkeley.edu/ International Computer Science Institute], working with [https://www.stat.berkeley.edu/~mmahoney/index.html Michael Mahoney]. I received my Ph.D. from the Department of Mathematics at University of California San Diego, where I was fortunate to be advised by [https://math.ucsd.edu/people/profiles/ioana-dumitriu Ioana Dumitriu] and [https://mathweb.ucsd.edu/~tkemp/ Todd Kemp]. 
 
 #== Education 
 
 == Research Interests
-My current research focuses on theoretically understanding and improving fundamental algorithms in data science, especially in deep learning, using tools from high-dimensional probability. \n
-- Random Matrix Theory and Free Probability Theory
+My current research focuses on developing the mathematical foundations of artificial intelligence, especially in deep learning, using tools from high-dimensional probability.
 - Deep Learning Theory and Foundations of AI
-- High-dimensional Statistics
+- Randomized Numerical Linear Algebra and Optimization in LLM
+- Random Matrix Theory and Free Probability Theory
+
+
 
 == Publications and Preprints
+- [https://arxiv.org/abs/2508.01456 Singular values of sparse random rectangular matrices: Emergence of outliers at criticality.] \n
+Ioana Dumitriu, Hai-Xiao Wang, Zhichao Wang, Yizhe Zhu \n
+Submitted
+
+- [https://arxiv.org/abs/2506.11357 Generalization Bound of Gradient Flow through Training Trajectory and Data-dependent Kernel.] \n
+Yilan Chen, Zhichao Wang, Wei Huang, Andi Han, Taiji Suzuki, Arya Mazumdar \n
+NeurIPS 2025.
+
+- [https://arxiv.org/abs/2506.03470 Models of Heavy-Tailed Mechanistic Universality.] \n
+Liam Hodgkinson, Zhichao Wang, and Michael W. Mahoney \n
+ICML 2025.
+
+- [https://arxiv.org/abs/2408.01062 Universality of kernel random matrices and kernel regression in the quadratic regime.] \n
+Parthe Pandit, Zhichao Wang, and Yizhe Zhu \n
+Journal of Machine Learning Research.
+
 - [https://arxiv.org/abs/2402.10127 Nonlinear spiked covariance matrices and signal propagation in deep neural networks.] \n
-*Zhichao Wang*, Denny Wu, and Zhou Fan \n
-Submitted.
+Zhichao Wang, Denny Wu, and Zhou Fan \n
+37th Annual Conference on Learning Theory.
 
 - Unlocking Exact Recovery in Semi-Supervised Learning: Analysis of Spectral Method and Graph Convolution Network. \n
-Haixiao Wang and *Zhichao Wang* \n
-Submitted.
+Hai-Xiao Wang and Zhichao Wang \n
+ICML 2024.
 
 - [https://arxiv.org/abs/2305.14585 Faithful and Efficient Explanations for Neural Networks via Neural Tangent Kernel Surrogate Models.] \n
-Andrew Engel, *Zhichao Wang*, Natalie S. Frank, Ioana Dumitriu, Sutanay Choudhury, Anand Sarwate, and Tony Chiang \n
-ICLR 2024, *Spotlight*, to appear.
+Andrew Engel, Zhichao Wang, Natalie S. Frank, Ioana Dumitriu, Sutanay Choudhury, Anand Sarwate, and Tony Chiang \n
+ICLR 2024, *Spotlight*.
 
 - [https://openreview.net/forum?id=HlIAoCHDWW Learning in the Presence of Low-dimensional Structure: A Spiked Random Matrix Perspective.] \n
-Jimmy Ba, Murat A. Erdogdu, Taiji Suzuki, *Zhichao Wang*, and Denny Wu \n
+Jimmy Ba, Murat A. Erdogdu, Taiji Suzuki, Zhichao Wang, and Denny Wu \n
 NeurIPS 2023.
 
 - [https://arxiv.org/abs/2211.06506 Spectral evolution and invariance in linear-width neural networks.] \n
-*Zhichao Wang*, Andrew Engel, Anand Sarwate, Ioana Dumitriu, and Tony Chiang \n
+Zhichao Wang, Andrew Engel, Anand Sarwate, Ioana Dumitriu, and Tony Chiang \n
 NeurIPS 2023.
 
 - [https://arxiv.org/abs/2211.06077 Overparameterized random feature regression with nearly orthogonal data.] \n
-*Zhichao Wang* and Yizhe Zhu \n
+Zhichao Wang and Yizhe Zhu \n
 AISTATS 2023.
 
 - [https://openreview.net/forum?id=akddwRG6EGi High-dimensional Asymptotics of Feature Learning: How One Gradient Step Improves the Representation.] \n
-Jimmy Ba, Murat A. Erdogdu, Taiji Suzuki, *Zhichao Wang*, Denny Wu, and Greg Yang \n
+Jimmy Ba, Murat A. Erdogdu, Taiji Suzuki, Zhichao Wang, Denny Wu, and Greg Yang \n
 NeurIPS 2022.
 
 - [https://arxiv.org/abs/2109.09304 Deformed semicircle law and concentration of nonlinear random matrices for ultra-wide neural networks.] \n
-*Zhichao Wang* and Yizhe Zhu \n
-Annals of Applied Probability, to appear.
+Zhichao Wang and Yizhe Zhu \n
+Annals of Applied Probability.
 
 - [https://arxiv.org/abs/2102.01214 Tree convolution for probability distributions with unbounded support.] \n
-Ethan Davis, David Jekel, *Zhichao Wang* \n
+Ethan Davis, David Jekel, Zhichao Wang \n
 Latin American Journal of Probability and Mathematics Statistics 18.2 (2021), pp. 1585-1623. 
 
 - [https://arxiv.org/abs/2005.11879 Spectra of the Conjugate Kernel and Neural Tangent Kernel for linear-width neural networks.] \n
-Zhou Fan and *Zhichao Wang* \n
+Zhou Fan and Zhichao Wang \n
 NeurIPS 2020, *Oral Presentation*.
  
 - [https://arxiv.org/abs/1903.09592 Principal components in linear mixed models with general bulk.] \n
-Zhou Fan, Yi Sun, and *Zhichao Wang* \n
+Zhou Fan, Yi Sun, and Zhichao Wang \n
 The Annals of Statistics, 49.3 (2021), pp. 1489-1513.
 
 - [https://arxiv.org/abs/1811.00456 Higher variations for free Levy processes.] \n
-Michael Anshelevich and *Zhichao Wang* \n
+Michael Anshelevich and Zhichao Wang \n
 Studia Math. 252 (2020), pp. 49-81.
