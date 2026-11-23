@@ -1,0 +1,60 @@
+# Builds the Jekyll (al-folio) site and publishes it with GitHub Pages.
+# Runs on every push to main, and can be started by hand from the Actions tab.
+# Uses the same "GitHub Actions" Pages source as the previous jemdoc workflow,
+# so no repository setting needs to change.
+name: Build and deploy site
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install ImageMagick
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+      - name: Build site
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build
+      - name: Remove unused CSS
+        run: |
+          npm install -g purgecss
+          purgecss -c purgecss.config.js
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

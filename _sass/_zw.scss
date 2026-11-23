@@ -1,0 +1,593 @@
+/*******************************************************************************
+ * Zhichao Wang's site look, layered on top of al-folio.
+ *
+ * Light mode, "Spectrum": white page, ink text, cobalt accent,
+ *   Newsreader headings with Inter text.
+ * Dark mode, "Preprint at night": deep ink page with faint graph paper,
+ *   warm paper-white text, coral accent, STIX Two (LaTeX-like) throughout.
+ *
+ * Colours live in the custom properties below; change them here.
+ ******************************************************************************/
+
+$serif-display: "Newsreader", "Iowan Old Style", Georgia, serif;
+$sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+$tex: "STIX Two Text", "Latin Modern Roman", "Times New Roman", serif;
+
+:root {
+  --zw-ink: #14171f;
+  --zw-muted: #5b6170;
+  --zw-accent: #2643a8;
+  --zw-accent-soft: #c9d1ee;
+  --zw-accent-wash: #f3f5fc;
+  --zw-hot: #e4572e;
+  --zw-rule: #e6e8ee;
+  --zw-body-font: #{$sans};
+  --zw-head-font: #{$serif-display};
+
+  --global-bg-color: #ffffff;
+  --global-text-color: var(--zw-ink);
+  --global-text-color-light: var(--zw-muted);
+  --global-theme-color: var(--zw-accent);
+  --global-hover-color: var(--zw-accent);
+  --global-hover-text-color: #ffffff;
+  --global-divider-color: var(--zw-rule);
+  --global-card-bg-color: #ffffff;
+  --global-highlight-color: var(--zw-hot);
+  --global-footer-bg-color: #ffffff;
+  --global-footer-text-color: var(--zw-muted);
+  --global-footer-link-color: var(--zw-ink);
+  --global-code-bg-color: #f3f5fc;
+}
+
+html[data-theme="dark"] {
+  --zw-ink: #e9e6df;
+  --zw-muted: #a9a59b;
+  --zw-accent: #ff8b7e;
+  --zw-accent-soft: #6b3a35;
+  --zw-accent-wash: #1b1e24;
+  --zw-hot: #ff8b7e;
+  --zw-rule: #343843;
+  --zw-paper: #14161b;
+  --zw-grid: #1c1f26;
+  --zw-body-font: #{$tex};
+  --zw-head-font: #{$tex};
+
+  --global-bg-color: var(--zw-paper);
+  --global-text-color: var(--zw-ink);
+  --global-text-color-light: var(--zw-muted);
+  --global-theme-color: var(--zw-accent);
+  --global-hover-color: var(--zw-accent);
+  --global-hover-text-color: var(--zw-paper);
+  --global-divider-color: var(--zw-rule);
+  --global-card-bg-color: #191c22;
+  --global-highlight-color: var(--zw-hot);
+  --global-footer-bg-color: var(--zw-paper);
+  --global-footer-text-color: var(--zw-muted);
+  --global-footer-link-color: var(--zw-ink);
+  --global-code-bg-color: #1d2027;
+}
+
+/* ---------- Base type ---------- */
+
+body {
+  font-family: var(--zw-body-font);
+  font-size: 16.5px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+html[data-theme="dark"] body {
+  font-size: 17.5px;
+  background-color: var(--zw-paper);
+  background-image:
+    linear-gradient(var(--zw-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--zw-grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.post-title,
+.navbar-brand.title {
+  font-family: var(--zw-head-font);
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+html[data-theme="dark"] {
+  h2,
+  h3 {
+    font-weight: 600;
+    font-variant: small-caps;
+    letter-spacing: 0.02em;
+  }
+}
+
+a:hover {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.post-header .post-description,
+.post-header .desc,
+p.post-description {
+  color: var(--zw-muted);
+}
+
+/* ---------- Navbar ---------- */
+
+.navbar {
+  opacity: 1;
+  background-color: color-mix(in srgb, var(--global-bg-color) 94%, transparent) !important;
+  backdrop-filter: saturate(140%) blur(6px);
+  border-bottom: 1px solid var(--zw-rule);
+}
+
+html[data-theme="dark"] .navbar {
+  border-bottom: 2px solid var(--zw-ink);
+}
+
+.navbar-brand.title {
+  font-size: 1.3rem;
+  color: var(--zw-ink) !important;
+
+  .font-weight-bold {
+    font-weight: 600 !important;
+  }
+}
+
+html[data-theme="dark"] .navbar-brand.title {
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+
+  .font-weight-bold {
+    font-weight: 400 !important;
+  }
+}
+
+.navbar .nav-link {
+  font-size: 0.95rem;
+  color: var(--zw-ink) !important;
+}
+
+.navbar .nav-item.active > .nav-link {
+  color: var(--zw-accent) !important;
+  box-shadow: inset 0 -2px 0 var(--zw-accent);
+}
+
+html[data-theme="dark"] .navbar .nav-link {
+  font-size: 1.05rem;
+}
+
+html[data-theme="dark"] .navbar .nav-item.active > .nav-link {
+  color: var(--zw-ink) !important;
+  box-shadow: none;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+#progress::-webkit-progress-value {
+  background-color: var(--zw-accent);
+}
+
+/* ---------- About page header ---------- */
+
+.post-header {
+  margin-bottom: 1.5rem;
+}
+
+.post-title {
+  font-size: clamp(2.3rem, 5vw, 3.2rem);
+  line-height: 1.05;
+  font-weight: 600;
+
+  .font-weight-bold {
+    font-weight: inherit !important;
+  }
+}
+
+html[data-theme="dark"] .post .post-title {
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0;
+}
+
+.post-header .desc {
+  font-size: 1.05rem;
+  margin-top: 0.5rem;
+}
+
+/* Photo: soft cobalt frame in light mode, a thin black-and-white
+   "figure" frame in dark mode. */
+.profile {
+  width: min(32%, 270px);
+  margin: 0 0 1.25rem 2rem;
+
+  img {
+    border-radius: 10px !important;
+    box-shadow: 0 0 0 1px var(--zw-accent-soft), 0 12px 28px -18px rgba(20, 23, 31, 0.45) !important;
+  }
+
+  .more-info {
+    font-family: var(--zw-body-font) !important;
+    font-size: 0.85rem;
+    color: var(--zw-muted);
+    margin-top: 0.75rem;
+
+    p {
+      color: var(--zw-muted);
+      margin: 0;
+      font-family: inherit;
+    }
+  }
+}
+
+html[data-theme="dark"] .profile img {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: 1px solid var(--zw-ink);
+  outline-offset: 6px;
+}
+
+@media (max-width: 575.98px) {
+  .profile {
+    float: none !important;
+    width: 70%;
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+/* Section headings on the about page ("selected publications") */
+.post article > h2 {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--zw-rule);
+}
+
+html[data-theme="dark"] .post article > h2 {
+  border-top: 1px dashed var(--zw-rule);
+}
+
+/* ---------- Publications ---------- */
+
+.publications {
+  margin-top: 0.75rem;
+
+  ol.bibliography li {
+    padding: 1.1rem 0;
+    margin-bottom: 0;
+    border-top: 1px solid var(--zw-rule);
+
+    &:first-child {
+      border-top: 0;
+    }
+
+    .row > div[id] {
+      flex: 0 0 auto;
+      width: 83.333%;
+      max-width: 83.333%;
+    }
+
+    .abbr {
+      abbr.badge {
+        font-family: $sans;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        padding: 0.35em 0.5em;
+        border-radius: 5px !important;
+        background-color: var(--zw-accent) !important;
+        color: #ffffff !important;
+        max-width: max-content;
+        min-width: 4.6rem;
+        text-align: center;
+
+        div,
+        a {
+          color: #ffffff !important;
+        }
+      }
+
+      .preview {
+        width: 100%;
+        margin-top: 0.25rem;
+        border-radius: 6px;
+        background: var(--zw-accent-wash);
+        box-shadow: 0 0 0 1px var(--zw-rule) !important;
+      }
+    }
+
+    .title {
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.2rem;
+    }
+
+    .author {
+      font-size: 0.93rem;
+      color: var(--zw-muted);
+
+      > em {
+        color: var(--zw-ink);
+        font-weight: 600;
+        border-bottom: 0;
+      }
+
+      a {
+        color: var(--zw-muted);
+        border-bottom: 1px dotted var(--zw-muted);
+      }
+    }
+
+    .periodical {
+      font-size: 0.93rem;
+
+      em {
+        color: var(--zw-ink);
+      }
+    }
+
+    .links {
+      margin-top: 0.45rem;
+
+      a.btn {
+        font-family: $sans;
+        font-size: 0.72rem;
+        font-weight: 500;
+        border-radius: 5px;
+        padding: 0.15rem 0.65rem;
+        color: var(--zw-accent);
+        border: 1px solid var(--zw-accent-soft);
+
+        &:hover {
+          color: #ffffff;
+          background: var(--zw-accent);
+          border-color: var(--zw-accent);
+        }
+      }
+
+      a.award.btn {
+        color: var(--zw-hot);
+        border-color: var(--zw-hot);
+      }
+    }
+
+    .hidden.bibtex,
+    .hidden.abstract {
+      font-size: 0.85rem;
+    }
+  }
+
+  h2.bibliography {
+    font-family: var(--zw-head-font);
+    font-size: 1.5rem;
+    color: var(--zw-muted);
+    text-align: left;
+    border-top: 0;
+    margin-top: 2.25rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
+html[data-theme="dark"] .publications {
+  margin-top: 0.75rem;
+
+  ol.bibliography li {
+    border-top: 1px dashed var(--zw-rule);
+
+    &:first-child {
+      border-top: 0;
+    }
+
+    .abbr {
+      abbr.badge {
+        background-color: transparent !important;
+        border: 1.5px solid var(--zw-accent);
+        border-radius: 3px !important;
+        color: var(--zw-accent) !important;
+
+        div,
+        a {
+          color: var(--zw-accent) !important;
+        }
+      }
+
+      .preview {
+        border-radius: 0;
+        background: var(--zw-paper);
+        box-shadow: none !important;
+        outline: 1px solid var(--zw-ink);
+      }
+    }
+
+    .links a.btn {
+      background: var(--zw-ink);
+      color: var(--zw-paper);
+      border: 1px solid var(--zw-ink);
+      border-radius: 3px;
+
+      &:hover {
+        background: var(--zw-accent);
+        border-color: var(--zw-accent);
+        color: var(--zw-paper);
+      }
+    }
+
+    .links a.award.btn {
+      background: transparent;
+      color: var(--zw-accent);
+      border-color: var(--zw-accent);
+    }
+  }
+
+  h2.bibliography {
+    font-style: italic;
+    font-variant: normal;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .publications ol.bibliography li {
+    .row > div[id] {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .abbr abbr.badge {
+      width: auto !important;
+    }
+  }
+}
+
+/* ---------- Social icons + footer ---------- */
+
+.social .contact-icons {
+  font-size: 2rem;
+
+  a {
+    color: var(--zw-ink);
+    margin: 0 0.35rem;
+
+    &:hover {
+      color: var(--zw-accent);
+    }
+  }
+}
+
+.social .contact-note {
+  color: var(--zw-muted);
+  font-size: 0.9rem;
+}
+
+footer.sticky-bottom {
+  font-size: 0.82rem;
+  color: var(--zw-muted);
+  border-top: 1px solid var(--zw-rule);
+}
+
+/* ---------- Simple lists used on talks / teaching ---------- */
+
+.talks ul,
+.teaching-list ul {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    padding: 0.85rem 0;
+    border-top: 1px solid var(--zw-rule);
+  }
+
+  li:first-child {
+    border-top: 0;
+  }
+}
+
+html[data-theme="dark"] {
+  .talks ul li,
+  .teaching-list ul li {
+    border-top-style: dashed;
+  }
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.note-card {
+  display: block;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--zw-accent-soft);
+  border-radius: 6px;
+  font-weight: 500;
+  text-align: center;
+
+  &:hover {
+    background: var(--zw-accent);
+    color: #ffffff !important;
+    text-decoration: none !important;
+  }
+}
+
+html[data-theme="dark"] .note-card {
+  border: 1px solid var(--zw-ink);
+  border-radius: 0;
+  color: var(--zw-ink);
+
+  &:hover {
+    background: var(--zw-ink);
+    color: var(--zw-paper) !important;
+  }
+}
+
+/* ---------- CV page ---------- */
+
+.cv-actions {
+  margin: 0 0 1rem;
+}
+
+.btn-cv {
+  display: inline-block;
+  padding: 0.55rem 1.1rem;
+  border-radius: 6px;
+  background: var(--zw-accent);
+  color: #ffffff !important;
+  font-family: $sans;
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  &:hover {
+    text-decoration: none !important;
+    filter: brightness(1.08);
+  }
+}
+
+html[data-theme="dark"] .btn-cv {
+  background: var(--zw-ink);
+  color: var(--zw-paper) !important;
+  border-radius: 3px;
+}
+
+.cv-embed {
+  width: 100%;
+  height: 80vh;
+  min-height: 520px;
+  border: 1px solid var(--zw-rule);
+  border-radius: 6px;
+}
+
+/* ---------- Publication filter box ---------- */
+
+.publications input.search,
+input#bibsearch,
+.bibsearch input,
+input[type="text"].search {
+  font-family: var(--zw-body-font);
+}
+
+html[data-theme="dark"] input[type="text"],
+html[data-theme="dark"] input[type="search"] {
+  background: var(--zw-paper) !important;
+  color: var(--zw-ink) !important;
+  border: 1px solid var(--zw-ink) !important;
+  border-radius: 0 !important;
+}
+
+.talks li a {
+  font-weight: 600;
+
+  strong {
+    color: inherit;
+    font-weight: inherit;
+  }
+}
