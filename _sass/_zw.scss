@@ -591,3 +591,31 @@ html[data-theme="dark"] input[type="search"] {
     font-weight: inherit;
   }
 }
+
+/* ---------- Two-mode theme toggle (no "system" state) ---------- */
+
+#light-toggle-system {
+  display: none !important;
+}
+
+/* ---------- Links row above selected publications ---------- */
+
+.social.social-top {
+  text-align: left;
+  margin: 1.75rem 0 0.5rem;
+
+  .contact-icons {
+    font-size: 1.6rem;
+
+    a {
+      margin: 0 1.1rem 0 0;
+    }
+  }
+
+  .contact-note {
+    text-align: left;
+    margin-top: 0.4rem;
+    font-size: 0.95rem;
+    color: var(--zw-muted);
+  }
+}

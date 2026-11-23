@@ -14,6 +14,8 @@ light mode uses a clean cobalt style, dark mode looks like a typeset preprint on
 | Publications | `_bibliography/papers.bib` (add `selected = {true}` to show a paper on the home page) |
 | A figure next to a paper | put an image in `assets/img/publication_preview/` and add `preview = {file.png}` to that paper |
 | Talks, teaching, CV | `_pages/talks.md`, `_pages/teaching.md`, `pdf/CV.pdf` |
+| Blog and projects in the menu | set `nav: true` in `_pages/blog.md` and `_pages/projects.md` (hidden for now) |
+| GitHub link | uncomment `github_username` in `_data/socials.yml` |
 | Blog posts | add `_posts/YYYY-MM-DD-title.md` (see `_drafts/example-post.md`) |
 | Projects | add files to `_projects/` (see `_projects/example_project.md`) |
 | Name, links, site settings | `_config.yml`, `_data/socials.yml` |
@@ -42,6 +44,10 @@ Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the site and
 
 ## Notes on the theme
 
-`assets/css/main.scss` is a copy of the al-folio core stylesheet entry with one extra line that loads `_sass/_zw.scss`.
-It is recorded in `.al-folio-overrides.yml`; after updating the theme gems, run
-`bundle exec al-folio upgrade overrides audit` to check whether it needs refreshing.
+Two theme files are local copies with small changes:
+
+- `assets/css/main.scss`: the core stylesheet entry, plus one line that loads `_sass/_zw.scss`.
+- `assets/js/theme.js`: the theme switcher, changed to two modes (light and dark) instead of three.
+
+Both are recorded in `.al-folio-overrides.yml`; after updating the theme gems, run
+`bundle exec al-folio upgrade overrides audit` to check whether they need refreshing.

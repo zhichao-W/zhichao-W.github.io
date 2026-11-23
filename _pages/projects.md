@@ -3,7 +3,7 @@ layout: page
 title: projects
 permalink: /projects/
 description: Research projects, code, and demos.
-nav: true
+nav: false # hidden until there is content; set to true to show it in the menu
 nav_order: 3
 display_categories: []
 horizontal: false

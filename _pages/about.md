@@ -11,12 +11,9 @@ profile:
   align: right
   image: prof_pic.jpg # replace assets/img/prof_pic.jpg with a new photo any time
   image_circular: false
-  more_info: >
-    <p>Department of Statistics</p>
-    <p>University of California, Berkeley</p>
 
 selected_papers: true # papers marked selected={true} in _bibliography/papers.bib
-social: true
+social: false # links are placed in the text below, above selected publications
 
 announcements:
   enabled: false # turn on once you add items to _news/
@@ -36,3 +33,8 @@ My research develops the mathematical and computational foundations of artificia
 - Deep learning theory and the foundations of AI
 - Randomized numerical linear algebra and optimization for large language models
 - Random matrix theory
+
+<div class="social social-top">
+  <div class="contact-icons">{% social_links %}</div>
+  <div class="contact-note">Contact: zhichao (dot) wang (at) berkeley (dot) edu</div>
+</div>
