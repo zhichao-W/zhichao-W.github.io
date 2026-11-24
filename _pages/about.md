@@ -10,7 +10,7 @@ subtitle: >
 profile:
   align: right
   # One photo is picked at random on each visit. To add one, put it in
-  # assets/img/ (about 4:5, e.g. 640x800) and list its file name here.
+  # assets/img/ (about 4:5, e.g. 480x600) and list its file name here.
   images:
     - prof_pic.jpg
     - prof_pic_2.jpg
