@@ -37,8 +37,8 @@ I am a postdoctoral researcher jointly affiliated with the [Department of Statis
 
 My research develops the mathematical and computational foundations of artificial intelligence, using tools from high-dimensional probability and numerical linear algebra. Current interests:
 
-- **Deep learning theory:** feature learning, generalization, and scaling laws, via random matrix theory and high-dimensional statistics
-- **Efficient AI:** low-precision training, spectral optimizers, and randomized numerical linear algebra
-- **AI safety and interpretability:** representation geometry, spectral diagnostics of LLMs, and safety-preserving fine-tuning and quantization
+- **Deep learning theory:** feature learning, generalization, and neural scaling laws
+- **Efficient, safe, and interpretable AI:** low-precision training, spectral optimizers, and randomized numerical linear algebra; representation geometry, spectral diagnostics, and safety-preserving fine-tuning and quantization of LLMs
+- **High-dimensional probability and statistics:** random matrix theory, spiked models, and signal detection and recovery
 
 {% include contact_links.liquid %}
