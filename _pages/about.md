@@ -14,6 +14,7 @@ profile:
   images:
     - prof_pic.jpg
     - prof_pic_2.jpg
+    - prof_pic_3.jpg
   image_circular: false
   more_info: >
     <p class="photo-contact"><span class="photo-contact-label"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact</span>
