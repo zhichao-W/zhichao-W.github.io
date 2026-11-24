@@ -1,11 +1,13 @@
 # zhichao-w.github.io
 
-My personal website: https://zhichao-w.github.io/
+Source of my personal website: **https://zhichao-w.github.io**
 
-Built with [Jekyll](https://jekyllrb.com/) and the [al-folio](https://github.com/alshedivat/al-folio) starter, with a custom look:
-light mode uses a clean cobalt style, dark mode looks like a typeset preprint on graph paper.
+Built with [Jekyll](https://jekyllrb.com/) and [al-folio](https://github.com/alshedivat/al-folio).
 
-## Where things live
+<details>
+<summary>Editing notes</summary>
+
+### Where things live
 
 | To change | Edit |
 | --- | --- |
@@ -22,7 +24,7 @@ light mode uses a clean cobalt style, dark mode looks like a typeset preprint on
 | Name, links, site settings | `_config.yml`, `_data/socials.yml` |
 | Colours and fonts | `_sass/_zw.scss` |
 
-## Preview locally
+### Preview locally
 
 With Docker (easiest, nothing else to install):
 
@@ -39,11 +41,11 @@ bundle exec jekyll serve
 # open http://localhost:4000
 ```
 
-## Publishing
+### Publishing
 
 Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes it with GitHub Pages.
 
-## Notes on the theme
+### Theme files changed locally
 
 Two theme files are local copies with small changes:
 
@@ -52,3 +54,5 @@ Two theme files are local copies with small changes:
 
 Both are recorded in `.al-folio-overrides.yml`; after updating the theme gems, run
 `bundle exec al-folio upgrade overrides audit` to check whether they need refreshing.
+
+</details>
