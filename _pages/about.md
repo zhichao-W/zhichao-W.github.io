@@ -39,7 +39,7 @@ My research develops the mathematical and computational foundations of artificia
 
 - Deep learning theory and the foundations of AI
 - Efficient AI: low-precision training and computation, matrix-aware optimization, and randomized numerical linear algebra for large language models
-- Safe and reliable AI: spectral diagnostics of trained large language models, model auditing, interpretability, and generalization guarantees
+- Statistical foundations of AI safety and reliability, including model evaluation, uncertainty quantification, and verification of foundation models and AI agents
 - Random matrix theory
 
 {% include contact_links.liquid %}
