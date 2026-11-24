@@ -230,6 +230,11 @@ html[data-theme="dark"] .post .post-title {
   }
 }
 
+/* Several photos can be listed in about.md; one is shown at random. */
+.profile-photo:not(.is-active) {
+  display: none;
+}
+
 html[data-theme="dark"] .profile img {
   border-radius: 0 !important;
   box-shadow: none !important;

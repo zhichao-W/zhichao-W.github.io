@@ -1,0 +1,117 @@
+---
+layout: default
+---
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      {% if site.title == 'blank' %}
+        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+        {{ site.last_name }}
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+    </h1>
+    <p class="desc">{{ page.subtitle }}</p>
+  </header>
+
+  <article>
+    {% if page.profile %}
+      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+        {% comment %}
+          zw override: `profile.images` (a list) shows one photo picked at random
+          on each visit; the first one is shown when JavaScript is off.
+          A single `profile.image` still works as before.
+        {% endcomment %}
+        {% if page.profile.images %}
+          {% assign profile_images = page.profile.images %}
+        {% elsif page.profile.image %}
+          {% assign profile_images = page.profile.image | split: '|' %}
+        {% endif %}
+        {% if profile_images %}
+          {% if page.profile.image_circular %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+          {% else %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+          {% endif %}
+          {% capture profile_alt %}{{ site.first_name }} {{ site.last_name }}{% endcapture %}
+          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw{% endcapture %}
+          <div class="profile-photos" data-count="{{ profile_images.size }}">
+            {% for profile_image in profile_images %}
+              {% assign profile_image_path = profile_image | prepend: 'assets/img/' %}
+              <div class="profile-photo{% if forloop.first %} is-active{% endif %}">
+                {% comment %} lazy, so hidden photos are never downloaded {% endcomment %}
+                {% if profile_images.size > 1 %}
+                  {% assign profile_loading = 'lazy' %}
+                {% else %}
+                  {% assign profile_loading = 'eager' %}
+                {% endif %}
+                {%
+                  include figure.liquid loading=profile_loading path=profile_image_path class=profile_image_class sizes=sizes alt=profile_alt
+                  cache_bust=true
+                %}
+              </div>
+            {% endfor %}
+          </div>
+          {% if profile_images.size > 1 %}
+            <script>
+              (function () {
+                var photos = document.querySelectorAll('.profile-photo');
+                if (photos.length < 2) return;
+                var pick = Math.floor(Math.random() * photos.length);
+                photos.forEach(function (el, i) {
+                  el.classList.toggle('is-active', i === pick);
+                });
+              })();
+            </script>
+          {% endif %}
+        {% endif %}
+        {% if page.profile.more_info %}
+          <div class="more-info">{{ page.profile.more_info }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="clearfix">{{ content }}</div>
+
+    <!-- News -->
+    {% if page.announcements and page.announcements.enabled %}
+      <h2>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+      </h2>
+      {% include news.liquid limit=true %}
+    {% endif %}
+
+    <!-- Latest posts -->
+    {% if page.latest_posts and page.latest_posts.enabled %}
+      <h2>
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+      </h2>
+      {% include latest_posts.liquid %}
+    {% endif %}
+
+    <!-- Selected papers -->
+    {% if page.selected_papers %}
+      <h2>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+      </h2>
+      {% include selected_papers.liquid %}
+    {% endif %}
+
+    <!-- Social -->
+    {% if page.social %}
+      <div class="social">
+        <div class="contact-icons">{% social_links %}</div>
+
+        <div class="contact-note">{{ site.contact_note }}</div>
+      </div>
+    {% endif %}
+
+    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
+      {% if site.plugins contains 'al_newsletter' %}
+        {% include plugins/al_newsletter_form_center_margin.liquid %}
+      {% else %}
+        {% include newsletter.liquid center=true %}
+      {% endif %}
+    {% endif %}
+  </article>
+</div>

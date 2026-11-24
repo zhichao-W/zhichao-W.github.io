@@ -9,7 +9,11 @@ subtitle: >
 
 profile:
   align: right
-  image: prof_pic.jpg # replace assets/img/prof_pic.jpg with a new photo any time
+  # One photo is picked at random on each visit. To add one, put it in
+  # assets/img/ (about 4:5, e.g. 640x800) and list its file name here.
+  images:
+    - prof_pic.jpg
+    - prof_pic_2.jpg
   image_circular: false
   more_info: >
     <p class="photo-contact"><span class="photo-contact-label"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact</span>
