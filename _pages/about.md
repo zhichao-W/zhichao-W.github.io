@@ -37,9 +37,8 @@ I am a postdoctoral researcher jointly affiliated with the [Department of Statis
 
 My research develops the mathematical and computational foundations of artificial intelligence, using tools from high-dimensional probability and numerical linear algebra. Current interests:
 
-- Deep learning theory and the foundations of AI
-- Efficient AI: low-precision training and computation, matrix-aware optimization, and randomized numerical linear algebra for large language models
-- Statistical foundations of AI safety and reliability: model evaluation, uncertainty quantification, and verification of foundation models and AI agents
-- Random matrix theory
+- **Deep learning theory:** feature learning, generalization, and scaling laws, via random matrix theory and high-dimensional statistics
+- **Efficient AI:** low-precision training, spectral optimizers, and randomized numerical linear algebra
+- **AI safety and interpretability:** representation geometry, spectral diagnostics of LLMs, and safety-preserving fine-tuning and quantization
 
 {% include contact_links.liquid %}
