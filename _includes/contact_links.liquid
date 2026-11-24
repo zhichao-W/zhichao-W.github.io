@@ -1,0 +1,30 @@
+{% comment %}
+  Labeled link buttons + contact line on the home page (used in _pages/about.md).
+  Links come from _data/socials.yml; uncomment github_username there to show GitHub.
+{% endcomment %}
+{% assign s = site.data.socials %}
+<div class="contact-block">
+  <div class="contact-links">
+    {% if s.cv_pdf %}
+      <a class="contact-link is-primary" href="{{ s.cv_pdf | relative_url }}" target="_blank" rel="noopener">
+        <i class="fa-solid fa-file-lines" aria-hidden="true"></i><span>CV</span>
+      </a>
+    {% endif %}
+    {% if s.email %}
+      <a class="contact-link" href="mailto:{{ s.email }}">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Email</span>
+      </a>
+    {% endif %}
+    {% if s.scholar_userid %}
+      <a class="contact-link" href="https://scholar.google.com/citations?user={{ s.scholar_userid }}" target="_blank" rel="external nofollow noopener">
+        <i class="fa-brands fa-google-scholar" aria-hidden="true"></i><span>Google Scholar</span>
+      </a>
+    {% endif %}
+    {% if s.github_username %}
+      <a class="contact-link" href="https://github.com/{{ s.github_username }}" target="_blank" rel="external nofollow noopener">
+        <i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span>
+      </a>
+    {% endif %}
+  </div>
+  <p class="contact-line"><strong>Contact:</strong> <span class="contact-address">zhichao (dot) wang (at) berkeley (dot) edu</span></p>
+</div>

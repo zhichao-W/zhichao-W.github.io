@@ -600,22 +600,111 @@ html[data-theme="dark"] input[type="search"] {
 
 /* ---------- Links row above selected publications ---------- */
 
-.social.social-top {
-  text-align: left;
-  margin: 1.75rem 0 0.5rem;
+.contact-block {
+  margin: 1.9rem 0 0.4rem;
+}
 
-  .contact-icons {
-    font-size: 1.6rem;
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
 
-    a {
-      margin: 0 1.1rem 0 0;
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 1.05rem 0.5rem 0.9rem;
+  border: 1px solid #d7dbe6;
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--zw-ink) !important;
+  font-family: $sans;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none !important;
+  transition: border-color 0.15s, background-color 0.15s, color 0.15s, transform 0.15s;
+
+  i {
+    font-size: 1.1rem;
+    color: var(--zw-accent);
+    width: 1.15rem;
+    text-align: center;
+  }
+
+  span {
+    color: var(--zw-ink);
+  }
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--zw-accent);
+    background: var(--zw-accent-wash);
+    transform: translateY(-1px);
+
+    span {
+      color: var(--zw-accent);
     }
   }
 
-  .contact-note {
-    text-align: left;
-    margin-top: 0.4rem;
-    font-size: 0.95rem;
-    color: var(--zw-muted);
+  &.is-primary {
+    background: var(--zw-accent);
+    border-color: var(--zw-accent);
+
+    i,
+    span {
+      color: #ffffff;
+    }
+
+    &:hover,
+    &:focus-visible {
+      filter: brightness(1.1);
+    }
+  }
+}
+
+.contact-line {
+  margin: 0.9rem 0 0;
+  font-size: 0.95rem;
+  color: var(--zw-muted);
+
+  strong {
+    color: var(--zw-ink);
+    font-weight: 600;
+  }
+
+  .contact-address {
+    white-space: nowrap;
+  }
+}
+
+html[data-theme="dark"] {
+  .contact-link {
+    font-family: $tex;
+    font-size: 1.02rem;
+    font-weight: 500;
+    background: transparent;
+    border-color: #4a4f5c;
+    border-radius: 3px;
+
+    &:hover,
+    &:focus-visible {
+      background: rgba(255, 139, 126, 0.08);
+    }
+
+    &.is-primary {
+      background: var(--zw-ink);
+      border-color: var(--zw-ink);
+
+      i,
+      span {
+        color: var(--zw-paper);
+      }
+    }
+  }
+
+  .contact-line {
+    font-size: 1.02rem;
   }
 }

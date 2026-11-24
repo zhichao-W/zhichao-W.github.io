@@ -15,7 +15,8 @@ light mode uses a clean cobalt style, dark mode looks like a typeset preprint on
 | A figure next to a paper | put an image in `assets/img/publication_preview/` and add `preview = {file.png}` to that paper |
 | Talks, teaching, CV | `_pages/talks.md`, `_pages/teaching.md`, `pdf/CV.pdf` |
 | Blog and projects in the menu | set `nav: true` in `_pages/blog.md` and `_pages/projects.md` (hidden for now) |
-| GitHub link | uncomment `github_username` in `_data/socials.yml` |
+| GitHub link | uncomment `github_username` in `_data/socials.yml` (it then shows as a button on the home page) |
+| CV / Email / Scholar buttons on the home page | `_includes/contact_links.liquid` (links from `_data/socials.yml`) |
 | Blog posts | add `_posts/YYYY-MM-DD-title.md` (see `_drafts/example-post.md`) |
 | Projects | add files to `_projects/` (see `_projects/example_project.md`) |
 | Name, links, site settings | `_config.yml`, `_data/socials.yml` |

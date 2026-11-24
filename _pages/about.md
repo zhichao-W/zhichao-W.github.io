@@ -34,7 +34,4 @@ My research develops the mathematical and computational foundations of artificia
 - Randomized numerical linear algebra and optimization for large language models
 - Random matrix theory
 
-<div class="social social-top">
-  <div class="contact-icons">{% social_links %}</div>
-  <div class="contact-note">Contact: zhichao (dot) wang (at) berkeley (dot) edu</div>
-</div>
+{% include contact_links.liquid %}
