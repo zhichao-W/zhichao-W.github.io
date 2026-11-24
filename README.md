@@ -10,7 +10,7 @@ light mode uses a clean cobalt style, dark mode looks like a typeset preprint on
 | To change | Edit |
 | --- | --- |
 | Bio, photo caption, home page sections | `_pages/about.md` |
-| Profile photo | replace `assets/img/prof_pic.jpg` (portrait, about 4:5) |
+| Profile photos | put a portrait (about 4:5, e.g. 480x600) in `assets/img/` and list it under `profile.images` in `_pages/about.md`; one is shown at random on each visit |
 | Publications | `_bibliography/papers.bib`: `selected = {true}` shows a paper on the home page; `arxiv`, `doi`, `html` (OpenReview or paper page), `code` (GitHub) and `huggingface` fields add buttons. List order = file order, newest first |
 | A figure next to a paper | put an image in `assets/img/publication_preview/` and add `preview = {file.png}` to that paper |
 | Talks, teaching, CV | `_pages/talks.md`, `_pages/teaching.md`, `pdf/CV.pdf` |
