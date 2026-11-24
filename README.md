@@ -11,7 +11,7 @@ light mode uses a clean cobalt style, dark mode looks like a typeset preprint on
 | --- | --- |
 | Bio, photo caption, home page sections | `_pages/about.md` |
 | Profile photo | replace `assets/img/prof_pic.jpg` (portrait, about 4:5) |
-| Publications | `_bibliography/papers.bib` (add `selected = {true}` to show a paper on the home page) |
+| Publications | `_bibliography/papers.bib`: `selected = {true}` shows a paper on the home page; `arxiv`, `doi`, `html` (OpenReview or paper page), `code` (GitHub) and `huggingface` fields add buttons. List order = file order, newest first |
 | A figure next to a paper | put an image in `assets/img/publication_preview/` and add `preview = {file.png}` to that paper |
 | Talks, teaching, CV | `_pages/talks.md`, `_pages/teaching.md`, `pdf/CV.pdf` |
 | Blog and projects in the menu | set `nav: true` in `_pages/blog.md` and `_pages/projects.md` (hidden for now) |

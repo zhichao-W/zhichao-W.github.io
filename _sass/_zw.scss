@@ -598,6 +598,52 @@ html[data-theme="dark"] input[type="search"] {
   display: none !important;
 }
 
+/* ---------- Contact line under the photo ---------- */
+
+.profile .more-info {
+  text-align: center;
+  margin-top: 0.9rem;
+
+  p.photo-contact {
+    display: block;
+  }
+}
+
+.photo-contact-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--zw-muted);
+  margin-bottom: 0.2rem;
+
+  i {
+    color: var(--zw-accent);
+    margin-right: 0.3rem;
+    letter-spacing: 0;
+  }
+}
+
+.photo-contact-address {
+  display: block;
+  font-size: 0.84rem;
+  color: var(--zw-ink);
+  text-wrap: balance;
+}
+
+html[data-theme="dark"] .profile .more-info {
+  margin-top: 1.4rem;
+
+  .photo-contact-label {
+    font-size: 0.8rem;
+  }
+
+  .photo-contact-address {
+    font-size: 0.93rem;
+  }
+}
+
 /* ---------- Links row above selected publications ---------- */
 
 .contact-block {
@@ -664,20 +710,6 @@ html[data-theme="dark"] input[type="search"] {
   }
 }
 
-.contact-line {
-  margin: 0.9rem 0 0;
-  font-size: 0.95rem;
-  color: var(--zw-muted);
-
-  strong {
-    color: var(--zw-ink);
-    font-weight: 600;
-  }
-
-  .contact-address {
-    white-space: nowrap;
-  }
-}
 
 html[data-theme="dark"] {
   .contact-link {
@@ -704,7 +736,4 @@ html[data-theme="dark"] {
     }
   }
 
-  .contact-line {
-    font-size: 1.02rem;
-  }
 }

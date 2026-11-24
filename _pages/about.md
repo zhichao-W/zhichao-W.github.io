@@ -11,6 +11,9 @@ profile:
   align: right
   image: prof_pic.jpg # replace assets/img/prof_pic.jpg with a new photo any time
   image_circular: false
+  more_info: >
+    <p class="photo-contact"><span class="photo-contact-label"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact</span>
+    <span class="photo-contact-address">zhichao (dot) wang (at) berkeley (dot) edu</span></p>
 
 selected_papers: true # papers marked selected={true} in _bibliography/papers.bib
 social: false # links are placed in the text below, above selected publications
