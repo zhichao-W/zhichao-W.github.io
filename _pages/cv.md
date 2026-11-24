@@ -3,7 +3,7 @@ layout: page
 permalink: /cv/
 title: cv
 description:
-nav: true
+nav: false # hidden from the menu; the CV button on the home page opens pdf/CV.pdf
 nav_order: 6
 ---
 
